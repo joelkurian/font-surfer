@@ -10,7 +10,7 @@ if (!inputFile) {
 const outputHTML = argv['outputHTML'];
 const outputText = argv['outputText'];
 
-const convertToUnicode = () => {
+const convertToUnicode = (config) => {
   const bhartiGopikaRegex = /bharati[ ]?gopika/i;
   const gopikaTwo2Regex = /GopikaTwo/i;
 
@@ -18,9 +18,26 @@ const convertToUnicode = () => {
   const body = $('body');
   const BhartiGopikaParser = window.BhartiGopikaParser;
   const GopikaTwo2Parser = window.GopikaTwo2Parser;
+  const generateTextNodes = (node) => {
+    switch (node.nodeName) {
+      case 'IMG':
+        if (config['img']) {
+          const imgText = document.createTextNode(node.outerHTML);
+          const parent = $(node).parent()[0];
+          parent.insertBefore(imgText, node);
+        }
+        break;
 
-  var convert = (node) => {
+      default:
+        break;
+    }
+  };
+
+  const convert = (node) => {
     if (node.nodeType === Node.ELEMENT_NODE) {
+      if (config) {
+        generateTextNodes(node);
+      }
       $(node)
         .contents()
         .each((i, elem) => convert(elem));
@@ -52,9 +69,13 @@ const convertToUnicode = () => {
   await page.addScriptTag({ path: require.resolve('./unicoder/BhartiGopika') });
   await page.addScriptTag({ path: require.resolve('./unicoder/GopikaTwo2') });
 
-  await page.evaluate(convertToUnicode);
+  // page.on('console', (msg) => {
+  //   for (let i = 0; i < msg.args().length; ++i) console.log(`${i}: ${msg.args()[i]}`);
+  // });
+  // page.evaluate(() => console.log('hello', 5, { foo: 'bar' }));
 
   if (outputHTML) {
+    await page.evaluate(convertToUnicode, true);
     const content = await page.content();
     fs.writeFile(outputHTML, content, function(err) {
       if (err) {
@@ -64,6 +85,7 @@ const convertToUnicode = () => {
   }
 
   if (outputText) {
+    await page.evaluate(convertToUnicode, { img: true });
     const text = await page.evaluate(() => $('body')[0].innerText);
     fs.writeFile(outputText, text, function(err) {
       if (err) {
