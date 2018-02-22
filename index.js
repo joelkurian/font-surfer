@@ -1,14 +1,15 @@
 const puppeteer = require('puppeteer');
 const $ = require('jquery');
 const fs = require('fs');
+const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
 const inputFile = argv['_'].length > 0 ? argv['_'][0] : null;
 if (!inputFile) {
   console.log('No input file.');
 }
 
-const outputHTML = argv['outputHTML'];
-const outputText = argv['outputText'];
+const outputHTML = path.resolve(argv['outputHTML']);
+const outputText = path.resolve(argv['outputText']);
 
 const convertToUnicode = (config) => {
   const bhartiGopikaRegex = /bharati[ ]?gopika/i;
@@ -18,7 +19,7 @@ const convertToUnicode = (config) => {
   const body = $('body');
   const BhartiGopikaParser = window.BhartiGopikaParser;
   const GopikaTwo2Parser = window.GopikaTwo2Parser;
-  const generateTextNodes = (node) => {
+  const processElementNodes = (node) => {
     switch (node.nodeName) {
       case 'IMG':
         if (config['img']) {
@@ -33,10 +34,24 @@ const convertToUnicode = (config) => {
     }
   };
 
+  const processTextNodes = (node) => {
+    const verticalAlign = $(node)
+      .parent()
+      .css('verticalAlign');
+
+    if (verticalAlign === 'super' && config['sup']) {
+      node.textContent = '<sup>' + node.textContent + '</sup>';
+    }
+
+    if (verticalAlign === 'sub' && config['sub']) {
+      node.textContent = '<sub>' + node.textContent + '</sub>';
+    }
+  };
+
   const convert = (node) => {
     if (node.nodeType === Node.ELEMENT_NODE) {
       if (config) {
-        generateTextNodes(node);
+        processElementNodes(node);
       }
       $(node)
         .contents()
@@ -51,6 +66,10 @@ const convertToUnicode = (config) => {
       } else if (fontFamily.match(gopikaTwo2Regex)) {
         node.textContent = GopikaTwo2Parser.convert(node.textContent);
       }
+
+      if (config) {
+        processTextNodes(node);
+      }
     }
   };
 
@@ -62,7 +81,7 @@ const convertToUnicode = (config) => {
   const page = await browser.newPage();
 
   // TODO probable path processing for windows paths
-  await page.goto('file://' + inputFile);
+  await page.goto('file://' + path.resolve(inputFile));
   await page.addScriptTag({ path: require.resolve('jquery') });
   await page.addScriptTag({ path: require.resolve('./unicoder/unicode') });
   await page.addScriptTag({ path: require.resolve('./unicoder/unicode-gu') });
@@ -85,7 +104,7 @@ const convertToUnicode = (config) => {
   }
 
   if (outputText) {
-    await page.evaluate(convertToUnicode, { img: true });
+    await page.evaluate(convertToUnicode, { img: true, sup: true, sub: true });
     const text = await page.evaluate(() => $('body')[0].innerText);
     fs.writeFile(outputText, text, function(err) {
       if (err) {
