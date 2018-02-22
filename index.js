@@ -14,6 +14,7 @@ const outputText = argv['outputText'];
 const convertToUnicode = (config) => {
   const bhartiGopikaRegex = /bharati[ ]?gopika/i;
   const gopikaTwo2Regex = /GopikaTwo/i;
+  const symbolRegex = /symbol/i;
 
   const $ = window.$; //otherwise the transpiler will rename it and won't work
   const body = $('body');
@@ -47,6 +48,13 @@ const convertToUnicode = (config) => {
     const verticalAlign = $(node)
       .parent()
       .css('verticalAlign');
+    const fotnFace = $(node)
+      .parent()
+      .css('fontFamily');
+
+    if (fotnFace.match(symbolRegex) && config['symbol']) {
+      node.textContent = `<span class="ql-font-euclid-symbol">${node.textContent}</span>`;
+    }
 
     if (verticalAlign === 'super' && config['sup']) {
       node.textContent = '<sup>' + node.textContent + '</sup>';
@@ -74,6 +82,10 @@ const convertToUnicode = (config) => {
         node.textContent = BhartiGopikaParser.convert(node.textContent);
       } else if (fontFamily.match(gopikaTwo2Regex)) {
         node.textContent = GopikaTwo2Parser.convert(node.textContent);
+      } else if (fontFamily.match(symbolRegex)) {
+        $(node)
+          .parent()
+          .css('fontFamily', '"Euclid Symbol", sans-serif');
       }
 
       if (config) {
@@ -113,7 +125,7 @@ const convertToUnicode = (config) => {
   }
 
   if (outputText) {
-    await page.evaluate(convertToUnicode, { img: true, sup: true, sub: true });
+    await page.evaluate(convertToUnicode, { img: true, sup: true, sub: true, symbol: true });
     const text = await page.evaluate(() => $('body')[0].innerText);
     fs.writeFile(outputText, text, function(err) {
       if (err) {

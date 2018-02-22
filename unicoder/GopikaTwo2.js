@@ -7,7 +7,7 @@ var GopikaTwo2Parser = (() => {
   GopikaTwo2[35] = Gujarati.letter_II + Gujarati.sign_ANUSVARA;
   GopikaTwo2[36] = Gujarati.letter_I + Gujarati.sign_ANUSVARA;
   // GopikaTwo2[37] = %
-  GopikaTwo2[38] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[38] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA;
   // GopikaTwo2[39] = '
   // GopikaTwo2[40] = )
   // GopikaTwo2[41] = (
@@ -35,18 +35,18 @@ var GopikaTwo2Parser = (() => {
   // GopikaTwo2[63] = ?
   GopikaTwo2[64] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   GopikaTwo2[65] = Gujarati.letter_CHA;
-  GopikaTwo2[66] = Gujarati.letter_MA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[66] = Gujarati.letter_MA + Gujarati.sign_VIRAMA;
   GopikaTwo2[67] = Gujarati.letter_JHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   GopikaTwo2[68] = Gujarati.letter_DDA + Gujarati.sign_VIRAMA + Gujarati.letter_DDHA;
   GopikaTwo2[69] = Gujarati.letter_II;
   GopikaTwo2[70] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_LA;
-  GopikaTwo2[71] = Gujarati.letter_YA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[71] = Gujarati.letter_YA + Gujarati.sign_VIRAMA;
   GopikaTwo2[72] = Gujarati.sign_OM;
   GopikaTwo2[73] = Gujarati.vowel_SIGN_AI + Gujarati.sign_ANUSVARA;
   GopikaTwo2[74] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   GopikaTwo2[75] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_BHA;
-  GopikaTwo2[76] = Gujarati.letter_NA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[77] = Gujarati.letter_SA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[76] = Gujarati.letter_NA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[77] = Gujarati.letter_SA + Gujarati.sign_VIRAMA;
   GopikaTwo2[78] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_GA;
   GopikaTwo2[79] = Gujarati.letter_RA + Gujarati.sign_VIRAMA + Gujarati.sign_ANUSVARA;
   GopikaTwo2[80] = Gujarati.sign_CANDRABINDU;
@@ -63,7 +63,7 @@ var GopikaTwo2Parser = (() => {
   GopikaTwo2[91] = Gujarati.letter_CA;
   GopikaTwo2[92] = Gujarati.letter_RA + Gujarati.vowel_SIGN_UU;
   GopikaTwo2[93] = Gujarati.vowel_SIGN_VOCALIC_R;
-  GopikaTwo2[94] = Gujarati.letter_PHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[94] = Gujarati.letter_PHA + Gujarati.sign_VIRAMA;
   GopikaTwo2[95] = Gujarati.sign_ABBREVIATION;
   // GopikaTwo2[96] = '
   GopikaTwo2[97] = Gujarati.letter_TTA + Gujarati.sign_VIRAMA + Gujarati.letter_TTHA;
@@ -95,15 +95,14 @@ var GopikaTwo2Parser = (() => {
   GopikaTwo2[123] = Gujarati.letter_MA;
   GopikaTwo2[124] = Gujarati.sign_NUKTA;
   GopikaTwo2[125] = Gujarati.letter_VOCALIC_RR;
-  GopikaTwo2[126] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[126] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA;
   GopikaTwo2[141] = Gujarati.letter_LA + Gujarati.sign_VIRAMA + Gujarati.letter_LA;
   // GopikaTwo2[160] = Space
   GopikaTwo2[161] = Gujarati.letter_PA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   GopikaTwo2[162] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   GopikaTwo2[163] = Gujarati.letter_PHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   GopikaTwo2[164] = Gujarati.letter_LLA;
-  GopikaTwo2[165] =
-    Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_TA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[165] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_TA + Gujarati.sign_VIRAMA;
   // GopikaTwo2[166] = Not Visible
   GopikaTwo2[167] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   // GopikaTwo2[168] = Not Visible
@@ -124,60 +123,56 @@ var GopikaTwo2Parser = (() => {
   // Temp Skip GopikaTwo2[183]
   GopikaTwo2[184] = Gujarati.vowel_SIGN_UU;
   // temp Skip GopikaTwo2[185]
-  GopikaTwo2[186] =
-    Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[187] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[186] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[187] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA;
   GopikaTwo2[188] = Gujarati.letter_BHA;
   GopikaTwo2[189] = Gujarati.letter_GHA;
   GopikaTwo2[190] = Gujarati.letter_KHA;
-  GopikaTwo2[191] =
-    Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_NYA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[191] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_NYA + Gujarati.sign_VIRAMA;
   // GopikaTwo2[192] = Not Visible
   GopikaTwo2[193] = Gujarati.letter_RA + Gujarati.vowel_SIGN_U;
   GopikaTwo2[194] = Gujarati.vowel_SIGN_I;
-  GopikaTwo2[195] = Gujarati.letter_PA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[195] = Gujarati.letter_PA + Gujarati.sign_VIRAMA;
   GopikaTwo2[196] = Gujarati.letter_DHA;
-  GopikaTwo2[197] = Gujarati.letter_NYA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[197] = Gujarati.letter_NYA + Gujarati.sign_VIRAMA;
   GopikaTwo2[198] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_DA;
-  GopikaTwo2[199] = Gujarati.letter_BHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[199] = Gujarati.letter_BHA + Gujarati.sign_VIRAMA;
   GopikaTwo2[200] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_MA;
   GopikaTwo2[201] = Gujarati.letter_VOCALIC_R;
   GopikaTwo2[202] = Gujarati.letter_NGA;
   GopikaTwo2[203] = Gujarati.letter_SA;
-  GopikaTwo2[204] =
-    Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[204] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA;
   GopikaTwo2[205] = Gujarati.letter_JHA;
-  GopikaTwo2[206] = Gujarati.letter_GHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[207] = Gujarati.letter_KHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[206] = Gujarati.letter_GHA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[207] = Gujarati.letter_KHA + Gujarati.sign_VIRAMA;
   GopikaTwo2[209] = Gujarati.letter_NGA + Gujarati.sign_VIRAMA + Gujarati.letter_KA;
   GopikaTwo2[210] = Gujarati.letter_NA + Gujarati.sign_VIRAMA + Gujarati.letter_NA + Gujarati.sign_VIRAMA;
-  GopikaTwo2[211] =
-    Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[212] = Gujarati.letter_VA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[213] = Gujarati.letter_LA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[211] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[212] = Gujarati.letter_VA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[213] = Gujarati.letter_LA + Gujarati.sign_VIRAMA;
   GopikaTwo2[214] = Gujarati.letter_NGA + Gujarati.sign_VIRAMA + Gujarati.letter_KHA;
   GopikaTwo2[216] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_DHA;
   GopikaTwo2[217] = Gujarati.sign_VIRAMA + Gujarati.letter_RA;
-  GopikaTwo2[218] = Gujarati.letter_THA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[219] = Gujarati.letter_NNA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[218] = Gujarati.letter_THA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[219] = Gujarati.letter_NNA + Gujarati.sign_VIRAMA;
   GopikaTwo2[220] = Gujarati.letter_NGA + Gujarati.sign_VIRAMA + Gujarati.letter_GA;
   GopikaTwo2[221] = Gujarati.letter_VOCALIC_L;
   GopikaTwo2[222] = Gujarati.letter_YA;
-  GopikaTwo2[223] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[223] = Gujarati.letter_JA + Gujarati.sign_VIRAMA;
   GopikaTwo2[224] = Gujarati.sign_AVAGRAHA;
   GopikaTwo2[225] = Gujarati.letter_DA + Gujarati.vowel_SIGN_VOCALIC_R;
   GopikaTwo2[226] = Gujarati.sign_VIRAMA + Gujarati.letter_YA;
   GopikaTwo2[227] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_YA;
   GopikaTwo2[228] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_JA;
-  GopikaTwo2[229] = Gujarati.letter_CA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[230] = Gujarati.letter_DHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  GopikaTwo2[231] = Gujarati.letter_BA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[229] = Gujarati.letter_CA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[230] = Gujarati.letter_DHA + Gujarati.sign_VIRAMA;
+  GopikaTwo2[231] = Gujarati.letter_BA + Gujarati.sign_VIRAMA;
   GopikaTwo2[232] = Gujarati.letter_TTA + Gujarati.sign_VIRAMA + Gujarati.letter_TTA;
-  GopikaTwo2[233] = Gujarati.letter_LLA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[233] = Gujarati.letter_LLA + Gujarati.sign_VIRAMA;
   GopikaTwo2[234] = Gujarati.letter_TTHA + Gujarati.sign_VIRAMA + Gujarati.letter_TTHA;
   GopikaTwo2[235] = Gujarati.letter_DDHA + Gujarati.sign_VIRAMA + Gujarati.letter_DDHA;
   GopikaTwo2[236] = Gujarati.vowel_SIGN_CANDRA_E;
-  GopikaTwo2[237] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[237] = Gujarati.letter_TA + Gujarati.sign_VIRAMA;
   GopikaTwo2[238] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
   GopikaTwo2[239] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
   GopikaTwo2[240] = Gujarati.letter_VA;
@@ -185,15 +180,14 @@ var GopikaTwo2Parser = (() => {
   GopikaTwo2[242] = Gujarati.letter_JA + Gujarati.vowel_SIGN_AA;
   GopikaTwo2[243] = Gujarati.letter_PA + Gujarati.sign_VIRAMA + Gujarati.letter_TA;
   GopikaTwo2[244] = Gujarati.letter_U + Gujarati.sign_ANUSVARA;
-  GopikaTwo2[245] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[245] = Gujarati.letter_KA + Gujarati.sign_VIRAMA;
   GopikaTwo2[246] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   GopikaTwo2[247] = Gujarati.letter_LA;
-  GopikaTwo2[248] = Gujarati.letter_GA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[248] = Gujarati.letter_GA + Gujarati.sign_VIRAMA;
   GopikaTwo2[249] =
     Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
   GopikaTwo2[250] = Gujarati.sign_VIRAMA + Gujarati.letter_RA;
-  GopikaTwo2[251] =
-    Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  GopikaTwo2[251] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_SSA + Gujarati.sign_VIRAMA;
   GopikaTwo2[252] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Gujarati.letter_NNA;
   GopikaTwo2[253] = Gujarati.letter_NNA;
   GopikaTwo2[254] = Gujarati.letter_SHA;
@@ -472,6 +466,11 @@ var GopikaTwo2Parser = (() => {
     let wordArr = [...word];
     console.log('initial', wordArr);
 
+    var rephaAnusvaraIndex = wordArr.indexOf('\u004F');
+    if (rephaAnusvaraIndex !== -1) {
+      wordArr.splice(rephaAnusvaraIndex, 1, '\u006F', '\u006B');
+    }
+
     wordArr = shiftLeft(wordArr, '\u006F');
 
     var iRephaIndex = wordArr.indexOf('\u0160');
@@ -491,7 +490,7 @@ var GopikaTwo2Parser = (() => {
 
     console.log('initial unicode', [...output]);
 
-    output = replaceAll(output, Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER + Gujarati.vowel_SIGN_AA, '');
+    output = replaceAll(output, Gujarati.sign_VIRAMA + Gujarati.vowel_SIGN_AA, '');
     output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_E, Gujarati.vowel_SIGN_O);
     output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_CANDRA_E, Gujarati.vowel_SIGN_CANDRA_O);
     output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_AI, Gujarati.vowel_SIGN_AU);

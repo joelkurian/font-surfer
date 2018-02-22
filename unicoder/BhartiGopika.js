@@ -6,7 +6,7 @@ var BhartiGopikaParser = (() => {
   BhartiGopika[35] = Gujarati.letter_II + Gujarati.sign_ANUSVARA;
   BhartiGopika[36] = Gujarati.letter_I + Gujarati.sign_ANUSVARA;
   BhartiGopika[37] = Unicode.PERCENT_SIGN;
-  BhartiGopika[38] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[38] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA;
   // BhartiGopika[39] = // '
   // BhartiGopika[40] = (
   // BhartiGopika[41] = )
@@ -34,18 +34,18 @@ var BhartiGopikaParser = (() => {
   // BhartiGopika[63] = ?
   BhartiGopika[64] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   BhartiGopika[65] = Gujarati.letter_CHA;
-  BhartiGopika[66] = Gujarati.letter_MA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[66] = Gujarati.letter_MA + Gujarati.sign_VIRAMA;
   BhartiGopika[67] = Gujarati.letter_JHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   BhartiGopika[68] = Gujarati.letter_DDA + Gujarati.sign_VIRAMA + Gujarati.letter_DDHA;
   BhartiGopika[69] = Gujarati.letter_II;
   BhartiGopika[70] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_LA;
-  BhartiGopika[71] = Gujarati.letter_YA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[71] = Gujarati.letter_YA + Gujarati.sign_VIRAMA;
   BhartiGopika[72] = Gujarati.sign_OM;
   BhartiGopika[73] = Gujarati.vowel_SIGN_AI + Gujarati.sign_ANUSVARA;
   BhartiGopika[74] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   BhartiGopika[75] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_BHA;
-  BhartiGopika[76] = Gujarati.letter_NA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[77] = Gujarati.letter_SA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[76] = Gujarati.letter_NA + Gujarati.sign_VIRAMA;
+  BhartiGopika[77] = Gujarati.letter_SA + Gujarati.sign_VIRAMA;
   BhartiGopika[78] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_GA;
   BhartiGopika[79] = Gujarati.letter_RA + Gujarati.sign_VIRAMA + Gujarati.sign_ANUSVARA;
   BhartiGopika[80] = Gujarati.sign_CANDRABINDU;
@@ -62,7 +62,7 @@ var BhartiGopikaParser = (() => {
   BhartiGopika[91] = Gujarati.letter_CA;
   BhartiGopika[92] = Gujarati.letter_RA + Gujarati.vowel_SIGN_UU;
   BhartiGopika[93] = Gujarati.vowel_SIGN_VOCALIC_R;
-  BhartiGopika[94] = Gujarati.letter_PHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[94] = Gujarati.letter_PHA + Gujarati.sign_VIRAMA;
   BhartiGopika[95] = Gujarati.sign_ABBREVIATION;
   // temp_Skip  BhartiGopika[96] = '\u0A95';
   BhartiGopika[97] = Gujarati.letter_TTA + Gujarati.sign_VIRAMA + Gujarati.letter_TTHA;
@@ -94,15 +94,14 @@ var BhartiGopikaParser = (() => {
   BhartiGopika[123] = Gujarati.letter_MA;
   BhartiGopika[124] = Gujarati.sign_NUKTA;
   BhartiGopika[125] = Gujarati.letter_VOCALIC_RR;
-  BhartiGopika[126] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[126] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA;
   // not available (delete) BhartiGopika[141] = Gujarati.letter_VOCALIC_R;
   // BhartiGopika[160] = // space u0AA1
   BhartiGopika[161] = Gujarati.letter_PA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   BhartiGopika[162] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   BhartiGopika[163] = Gujarati.letter_PHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   BhartiGopika[164] = Gujarati.letter_LLA;
-  BhartiGopika[165] =
-    Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_TA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[165] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_TA + Gujarati.sign_VIRAMA;
   // BhartiGopika[166] = '\u0A95';
   BhartiGopika[167] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   // BhartiGopika[168] = char not visible
@@ -123,60 +122,56 @@ var BhartiGopikaParser = (() => {
   // temp Skip BhartiGopika[183] = '\u0A95';
   BhartiGopika[184] = Gujarati.vowel_SIGN_UU;
   // temp Skip BhartiGopika[185] = '\u0A95';
-  BhartiGopika[186] =
-    Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[187] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[186] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA;
+  BhartiGopika[187] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA;
   BhartiGopika[188] = Gujarati.letter_BHA;
   BhartiGopika[189] = Gujarati.letter_GHA;
   BhartiGopika[190] = Gujarati.letter_KHA;
-  BhartiGopika[191] =
-    Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_NYA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[191] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_NYA + Gujarati.sign_VIRAMA;
   // BhartiGopika[192] = // not Visible
   BhartiGopika[193] = Gujarati.letter_RA + Gujarati.vowel_SIGN_U;
   BhartiGopika[194] = Gujarati.vowel_SIGN_I;
-  BhartiGopika[195] = Gujarati.letter_PA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[195] = Gujarati.letter_PA + Gujarati.sign_VIRAMA;
   BhartiGopika[196] = Gujarati.letter_DHA;
-  BhartiGopika[197] = Gujarati.letter_NYA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[197] = Gujarati.letter_NYA + Gujarati.sign_VIRAMA;
   BhartiGopika[198] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_DA;
-  BhartiGopika[199] = Gujarati.letter_BHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[199] = Gujarati.letter_BHA + Gujarati.sign_VIRAMA;
   BhartiGopika[200] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_MA;
   BhartiGopika[201] = Gujarati.letter_VOCALIC_R;
   BhartiGopika[202] = Gujarati.letter_NGA;
   BhartiGopika[203] = Gujarati.letter_DA;
-  BhartiGopika[204] =
-    Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[204] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA;
   BhartiGopika[205] = Gujarati.letter_JHA;
-  BhartiGopika[206] = Gujarati.letter_GHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[207] = Gujarati.letter_KHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[206] = Gujarati.letter_GHA + Gujarati.sign_VIRAMA;
+  BhartiGopika[207] = Gujarati.letter_KHA + Gujarati.sign_VIRAMA;
   BhartiGopika[209] = Gujarati.letter_NGA + Gujarati.sign_VIRAMA + Gujarati.letter_KA;
   BhartiGopika[210] = Gujarati.letter_NA + Gujarati.sign_VIRAMA + Gujarati.letter_NA + Gujarati.sign_VIRAMA;
-  BhartiGopika[211] =
-    Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[212] = Gujarati.letter_VA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[213] = Gujarati.letter_LA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[211] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_YA + Gujarati.sign_VIRAMA;
+  BhartiGopika[212] = Gujarati.letter_VA + Gujarati.sign_VIRAMA;
+  BhartiGopika[213] = Gujarati.letter_LA + Gujarati.sign_VIRAMA;
   BhartiGopika[214] = Gujarati.letter_NGA + Gujarati.sign_VIRAMA + Gujarati.letter_KHA;
   BhartiGopika[216] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_DHA;
   BhartiGopika[217] = Gujarati.sign_VIRAMA + Gujarati.letter_RA;
-  BhartiGopika[218] = Gujarati.letter_THA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[219] = Gujarati.letter_NNA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[218] = Gujarati.letter_THA + Gujarati.sign_VIRAMA;
+  BhartiGopika[219] = Gujarati.letter_NNA + Gujarati.sign_VIRAMA;
   BhartiGopika[220] = Gujarati.letter_NGA + Gujarati.sign_VIRAMA + Gujarati.letter_GA;
   BhartiGopika[221] = Gujarati.letter_VOCALIC_L;
   BhartiGopika[222] = Gujarati.letter_YA;
-  BhartiGopika[223] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[223] = Gujarati.letter_JA + Gujarati.sign_VIRAMA;
   BhartiGopika[224] = Gujarati.sign_AVAGRAHA;
   BhartiGopika[225] = Gujarati.letter_DA + Gujarati.vowel_SIGN_VOCALIC_R;
   BhartiGopika[226] = Gujarati.sign_VIRAMA + Gujarati.letter_YA;
   BhartiGopika[227] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_YA;
   BhartiGopika[228] = Gujarati.letter_JA + Gujarati.sign_VIRAMA + Gujarati.letter_JA;
-  BhartiGopika[229] = Gujarati.letter_CA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[230] = Gujarati.letter_DHA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
-  BhartiGopika[231] = Gujarati.letter_BA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[229] = Gujarati.letter_CA + Gujarati.sign_VIRAMA;
+  BhartiGopika[230] = Gujarati.letter_DHA + Gujarati.sign_VIRAMA;
+  BhartiGopika[231] = Gujarati.letter_BA + Gujarati.sign_VIRAMA;
   BhartiGopika[232] = Gujarati.letter_TTA + Gujarati.sign_VIRAMA + Gujarati.letter_TTA;
-  BhartiGopika[233] = Gujarati.letter_LLA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[233] = Gujarati.letter_LLA + Gujarati.sign_VIRAMA;
   BhartiGopika[234] = Gujarati.letter_TTHA + Gujarati.sign_VIRAMA + Gujarati.letter_TTHA;
   BhartiGopika[235] = Gujarati.letter_DDHA + Gujarati.sign_VIRAMA + Gujarati.letter_DDHA;
   BhartiGopika[236] = Gujarati.vowel_SIGN_CANDRA_E;
-  BhartiGopika[237] = Gujarati.letter_TA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[237] = Gujarati.letter_TA + Gujarati.sign_VIRAMA;
   BhartiGopika[238] = Gujarati.letter_DA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
   BhartiGopika[239] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
   BhartiGopika[240] = Gujarati.letter_VA;
@@ -184,15 +179,14 @@ var BhartiGopikaParser = (() => {
   BhartiGopika[242] = Gujarati.letter_JA + Gujarati.vowel_SIGN_AA;
   BhartiGopika[243] = Gujarati.letter_PA + Gujarati.sign_VIRAMA + Gujarati.letter_TA;
   BhartiGopika[244] = Gujarati.letter_U + Gujarati.sign_ANUSVARA;
-  BhartiGopika[245] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[245] = Gujarati.letter_KA + Gujarati.sign_VIRAMA;
   BhartiGopika[246] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   BhartiGopika[247] = Gujarati.letter_LA;
-  BhartiGopika[248] = Gujarati.letter_GA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[248] = Gujarati.letter_GA + Gujarati.sign_VIRAMA;
   BhartiGopika[249] =
     Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
   BhartiGopika[250] = Gujarati.sign_VIRAMA + Gujarati.letter_RA;
-  BhartiGopika[251] =
-    Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER;
+  BhartiGopika[251] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_SSA + Gujarati.sign_VIRAMA;
   BhartiGopika[252] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Gujarati.letter_TTA;
   BhartiGopika[253] = Gujarati.letter_NNA;
   BhartiGopika[254] = Gujarati.letter_SHA;
@@ -205,7 +199,7 @@ var BhartiGopikaParser = (() => {
   BhartiGopika[352] = Gujarati.letter_RA + Gujarati.sign_VIRAMA + Gujarati.vowel_SIGN_I;
   BhartiGopika[353] = Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_U;
   BhartiGopika[381] = Gujarati.letter_THA;
-  BhartiGopika[382] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER; //need Zero With Joiner
+  BhartiGopika[382] = Gujarati.letter_KA + Gujarati.sign_VIRAMA; //need Zero With Joiner
   BhartiGopika[402] = Gujarati.letter_BA;
   //BhartiGopika[710] // probably single char "'"
   //BhartiGopika[8211] = //!unicode -
@@ -473,6 +467,11 @@ var BhartiGopikaParser = (() => {
     let wordArr = [...word];
     console.log('initial', wordArr);
 
+    var rephaAnusvaraIndex = wordArr.indexOf('\u004F');
+    if (rephaAnusvaraIndex !== -1) {
+      wordArr.splice(rephaAnusvaraIndex, 1, '\u006F', '\u0074');
+    }
+
     wordArr = shiftLeft(wordArr, '\u006F');
 
     var iRephaIndex = wordArr.indexOf('\u0160');
@@ -492,7 +491,7 @@ var BhartiGopikaParser = (() => {
 
     console.log('initial unicode', [...output]);
 
-    output = replaceAll(output, Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER + Gujarati.vowel_SIGN_AA, '');
+    output = replaceAll(output, Gujarati.sign_VIRAMA + Gujarati.vowel_SIGN_AA, '');
     output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_E, Gujarati.vowel_SIGN_O);
     output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_CANDRA_E, Gujarati.vowel_SIGN_CANDRA_O);
     output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_AI, Gujarati.vowel_SIGN_AU);
