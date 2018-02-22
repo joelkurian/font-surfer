@@ -8,8 +8,8 @@ if (!inputFile) {
   console.log('No input file.');
 }
 
-const outputHTML = path.resolve(argv['outputHTML']);
-const outputText = path.resolve(argv['outputText']);
+const outputHTML = argv['outputHTML'];
+const outputText = argv['outputText'];
 
 const convertToUnicode = (config) => {
   const bhartiGopikaRegex = /bharati[ ]?gopika/i;
@@ -23,7 +23,16 @@ const convertToUnicode = (config) => {
     switch (node.nodeName) {
       case 'IMG':
         if (config['img']) {
-          const imgText = document.createTextNode(node.outerHTML);
+          let imgHTML = node.outerHTML;
+          const height = $(node).css('height');
+          const width = $(node).css('width');
+          const sizeString = `height="${height}" width="${width}" style="height: ${height};width: ${width}"`;
+          imgHTML = imgHTML.replace(
+            new RegExp(/(?:class|className)=(?:["']\W+\s*(?:\w+)\()?["']([^'"]+)['"]/, 'g'),
+            sizeString
+          );
+
+          let imgText = document.createTextNode(imgHTML);
           const parent = $(node).parent()[0];
           parent.insertBefore(imgText, node);
         }
@@ -81,7 +90,7 @@ const convertToUnicode = (config) => {
   const page = await browser.newPage();
 
   // TODO probable path processing for windows paths
-  await page.goto('file://' + path.resolve(inputFile));
+  await page.goto('file://' + inputFile);
   await page.addScriptTag({ path: require.resolve('jquery') });
   await page.addScriptTag({ path: require.resolve('./unicoder/unicode') });
   await page.addScriptTag({ path: require.resolve('./unicoder/unicode-gu') });

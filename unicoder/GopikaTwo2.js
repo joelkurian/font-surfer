@@ -463,6 +463,10 @@ var GopikaTwo2Parser = (() => {
     return charArr;
   };
 
+  var replaceAll = (str, find, replace) => {
+    return str.replace(new RegExp(find, 'g'), replace);
+  };
+
   var convertWord = function(word) {
     let output = '';
     let wordArr = [...word];
@@ -487,20 +491,33 @@ var GopikaTwo2Parser = (() => {
 
     console.log('initial unicode', [...output]);
 
-    while (output.indexOf(Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER + Gujarati.vowel_SIGN_AA) !== -1) {
-      output = output.replace(Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER + Gujarati.vowel_SIGN_AA, '');
-    }
+    output = replaceAll(output, Gujarati.sign_VIRAMA + Unicode.ZERO_WIDTH_JOINER + Gujarati.vowel_SIGN_AA, '');
+    output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_E, Gujarati.vowel_SIGN_O);
+    output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_CANDRA_E, Gujarati.vowel_SIGN_CANDRA_O);
+    output = replaceAll(output, Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_AI, Gujarati.vowel_SIGN_AU);
+    output = replaceAll(output, Gujarati.letter_A + Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_E, Gujarati.letter_O);
 
-    while (output.indexOf(Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_E) !== -1) {
-      output = output.replace(Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_E, Gujarati.vowel_SIGN_O);
-    }
-
-    while (output.indexOf(Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_CANDRA_E) !== -1) {
-      output = output.replace(Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_CANDRA_E, Gujarati.vowel_SIGN_CANDRA_O);
-    }
-
-    output = output.replace(Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_AI, Gujarati.vowel_SIGN_AU);
-    output = output.replace(Gujarati.letter_A + Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_E, Gujarati.letter_O);
+    output = replaceAll(
+      output,
+      Gujarati.letter_A + Gujarati.vowel_SIGN_AA + Gujarati.sign_CANDRABINDU,
+      Gujarati.letter_AA + Gujarati.sign_CANDRABINDU
+    );
+    output = replaceAll(output, Gujarati.letter_A + Gujarati.vowel_SIGN_E, Gujarati.letter_E);
+    output = replaceAll(output, Gujarati.letter_A + Gujarati.vowel_SIGN_AA, Gujarati.letter_AA);
+    output = replaceAll(output, Gujarati.letter_A + Gujarati.vowel_SIGN_O, Gujarati.letter_O);
+    output = replaceAll(output, Gujarati.letter_A + Gujarati.vowel_SIGN_CANDRA_E, Gujarati.vowel_CANDRA_E);
+    output = replaceAll(output, Gujarati.letter_A + Gujarati.vowel_SIGN_CANDRA_O, Gujarati.vowel_CANDRA_O);
+    output = replaceAll(
+      output,
+      Gujarati.letter_A + Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_AI,
+      Gujarati.letter_AU
+    );
+    output = replaceAll(output, Gujarati.letter_A + Gujarati.vowel_SIGN_AI, Gujarati.letter_AI);
+    output = replaceAll(
+      output,
+      Gujarati.letter_A + Gujarati.vowel_SIGN_AA + Gujarati.vowel_SIGN_CANDRA_E,
+      Gujarati.vowel_CANDRA_O
+    );
 
     console.log('result', [...output]);
 
