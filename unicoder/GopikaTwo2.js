@@ -184,8 +184,7 @@ var GopikaTwo2Parser = (() => {
   GopikaTwo2[246] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   GopikaTwo2[247] = Gujarati.letter_LA;
   GopikaTwo2[248] = Gujarati.letter_GA + Gujarati.sign_VIRAMA;
-  GopikaTwo2[249] =
-    Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
+  GopikaTwo2[249] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_CA;
   GopikaTwo2[250] = Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   GopikaTwo2[251] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_SSA + Gujarati.sign_VIRAMA;
   GopikaTwo2[252] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Gujarati.letter_NNA;

@@ -183,8 +183,7 @@ var BhartiGopikaParser = (() => {
   BhartiGopika[246] = Gujarati.letter_HA + Gujarati.sign_VIRAMA + Gujarati.letter_NA;
   BhartiGopika[247] = Gujarati.letter_LA;
   BhartiGopika[248] = Gujarati.letter_GA + Gujarati.sign_VIRAMA;
-  BhartiGopika[249] =
-    Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_RA + Gujarati.sign_VIRAMA + Gujarati.letter_VA;
+  BhartiGopika[249] = Gujarati.letter_SHA + Gujarati.sign_VIRAMA + Gujarati.letter_CA;
   BhartiGopika[250] = Gujarati.sign_VIRAMA + Gujarati.letter_RA;
   BhartiGopika[251] = Gujarati.letter_KA + Gujarati.sign_VIRAMA + Gujarati.letter_SSA + Gujarati.sign_VIRAMA;
   BhartiGopika[252] = Gujarati.letter_SSA + Gujarati.sign_VIRAMA + Gujarati.letter_TTA;
