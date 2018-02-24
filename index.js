@@ -15,7 +15,7 @@ const convertToUnicode = (config) => {
   const bhartiGopikaRegex = /bharati[ ]?gopika/i;
   const gopikaTwo2Regex = /GopikaTwo/i;
   const symbolRegex = /symbol/i;
-  const mtExtraRegex = /mt[ ]?extra/i;
+  const mtExtraRegex = /mt[ ]?extra|euclid[ ]?extra/i;
 
   const $ = window.$; //otherwise the transpiler will rename it and won't work
   const body = $('body');
@@ -49,15 +49,15 @@ const convertToUnicode = (config) => {
     const verticalAlign = $(node)
       .parent()
       .css('verticalAlign');
-    const fotnFace = $(node)
+    const fontFace = $(node)
       .parent()
       .css('fontFamily');
 
-    if (fotnFace.match(symbolRegex) && config['symbol']) {
+    if (fontFace.match(symbolRegex) && config['symbol']) {
       node.textContent = `<span class="ql-font-euclid-symbol">${node.textContent}</span>`;
     }
 
-    if (fotnFace.match(mtExtraRegex) && config['symbol']) {
+    if (fontFace.match(mtExtraRegex) && config['symbol']) {
       node.textContent = `<span class="ql-font-euclid-extra">${node.textContent}</span>`;
     }
 
