@@ -3,7 +3,7 @@ const $ = require('jquery');
 const fs = require('fs');
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
-const inputFile = argv['_'].length > 0 ? argv['_'][0] : null;
+const inputFile = path.resolve(argv['_'].length > 0 ? argv['_'][0] : null);
 if (!inputFile) {
   console.log('No input file.');
 }
@@ -15,6 +15,7 @@ const convertToUnicode = (config) => {
   const bhartiGopikaRegex = /bharati[ ]?gopika/i;
   const gopikaTwo2Regex = /GopikaTwo/i;
   const symbolRegex = /symbol/i;
+  const mtExtraRegex = /mt[ ]?extra/i;
 
   const $ = window.$; //otherwise the transpiler will rename it and won't work
   const body = $('body');
@@ -56,6 +57,10 @@ const convertToUnicode = (config) => {
       node.textContent = `<span class="ql-font-euclid-symbol">${node.textContent}</span>`;
     }
 
+    if (fotnFace.match(mtExtraRegex) && config['symbol']) {
+      node.textContent = `<span class="ql-font-euclid-extra">${node.textContent}</span>`;
+    }
+
     if (verticalAlign === 'super' && config['sup']) {
       node.textContent = '<sup>' + node.textContent + '</sup>';
     }
@@ -86,6 +91,10 @@ const convertToUnicode = (config) => {
         $(node)
           .parent()
           .css('fontFamily', '"Euclid Symbol", sans-serif');
+      } else if (fontFamily.match(mtExtraRegex)) {
+        $(node)
+          .parent()
+          .css('fontFamily', '"Euclid Extra", sans-serif');
       }
 
       if (config) {
@@ -117,7 +126,7 @@ const convertToUnicode = (config) => {
   if (outputHTML) {
     await page.evaluate(convertToUnicode, true);
     const content = await page.content();
-    fs.writeFile(outputHTML, content, function(err) {
+    fs.writeFile(path.resolve(outputHTML), content, function(err) {
       if (err) {
         return console.log(err);
       }
@@ -127,7 +136,7 @@ const convertToUnicode = (config) => {
   if (outputText) {
     await page.evaluate(convertToUnicode, { img: true, sup: true, sub: true, symbol: true });
     const text = await page.evaluate(() => $('body')[0].innerText);
-    fs.writeFile(outputText, text, function(err) {
+    fs.writeFile(path.resolve(outputText), text, function(err) {
       if (err) {
         return console.log(err);
       }
